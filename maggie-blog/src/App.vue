@@ -28,14 +28,15 @@
             <section>
               <h2>About</h2>
               <div>
-                2019 &copy; Maggie | Code | Design
+                This blog was initially developed by HTML5 UP. It is designed by Maggie. The source code is available on GitHub.
               </div>
             </section>
             <section>
               <h2>Follow</h2>
-              <div>
-                2019 &copy; Maggie | Code | Design
-              </div>
+              <ul class="icons">
+                <li><Icon type="logo-github" /></li>
+                <li><Icon type="md-mail" /></li>
+              </ul>
             </section>
             <ul class="copyright">
               <li>2019 © Maggie. All rights reserved</li>
@@ -70,8 +71,7 @@ export default {
   color: #2c3e50;
 }
 
-h2{
-    font-size: 1.1em;
+h2, h3, h4, h5, h6 {
     font-weight: 900;
     line-height: 1.5;
     margin: 0 0 2em 0;
@@ -79,13 +79,18 @@ h2{
     letter-spacing: 0.35em;
 }
 
-.layout{
+h2 {
+  font-size: 1.1em;
+}
+
+.layout {
     border: 1px solid #d7dde4;
     background: #f5f7f9;
     position: relative;
     overflow: hidden;
 }
-.layout-logo{
+
+.layout-logo {
     width: 100px;
     height: 30px;
     background: #5b6270;
@@ -96,13 +101,17 @@ h2{
     left: 20px;
 }
 
-.layout-nav{
+.layout-nav {
     width: 420px;
     margin: 0 auto;
     margin-right: 20px;
 }
 
-#footer{
+section {
+  display: block;
+}
+
+#footer {
     background-color: #f6f6f6;
     border: 0;
     padding: 5em 0 3em 0;
@@ -110,11 +119,14 @@ h2{
     display: block;
 }
 
-#footer > .inner{
+#footer > .inner {
     width: 100%;
     max-width: 78em;
     margin: 0 auto;
     padding: 0 2.5em;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
@@ -132,6 +144,18 @@ h2{
 ul {
     display: block;
     margin: 0 0 2em 0;
+}
+
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    margin: -1em 0 2em -1em;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 1em 0 0 1em;
 }
 
 #footer > .inner .copyright {
